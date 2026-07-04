@@ -3,8 +3,9 @@ import {test,expect} from "@playwright/test";
 test.beforeAll(async()=>{
     console.log("Run before all tests")
 })
-test.beforeEach(async()=>{
+test.beforeEach(async({page})=>{
     console.log("Run before each tests")
+    await page.goto("http://localhost:3000/")
 })
 test.afterEach(async()=>{
     console.log("Run after each tests")
@@ -17,14 +18,14 @@ test.afterAll(async()=>{
 test("Test1",async({page})=>{
   console.log("Test 1 Execute begin")
   
-  await page.goto("http://localhost:3000/")
+//   await page.goto("http://localhost:3000/")
 
   await expect(page).toHaveTitle("ShopBoard")
 })
 test("Test2",async({page})=>{
   console.log("Test 2 Execute begin")
   
-  await page.goto("http://localhost:3000/")
+//   await page.goto("http://localhost:3000/")
 
   await expect(page).toHaveTitle("ShopBoard")
 })
