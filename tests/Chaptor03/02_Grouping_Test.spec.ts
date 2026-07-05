@@ -9,7 +9,7 @@ test.describe("Smoketesting",()=>{
     
         await page.getByRole("button",({name:"Login"})).click()
     
-        await expect(page).toHaveURL(/localhost:3000/)
+        await expect(page.getByRole("button",({name:"Logout"}))).toBeVisible()
     })
     test("grouping in playwright test 2",async ({page})=>{
         await page.goto("http://localhost:3000/practice")
@@ -19,7 +19,7 @@ test.describe("Smoketesting",()=>{
     
         await page.getByRole("button",({name:"Login"})).click()
     
-        await expect(page).toHaveURL(/localhost:3000/)
+        await expect(page.getByRole("button",({name:"Logout"}))).toBeVisible()
     })
     test("grouping in playwright test 3",async ({page})=>{
         await page.goto("http://localhost:3000/practice")
@@ -29,6 +29,6 @@ test.describe("Smoketesting",()=>{
     
         await page.getByRole("button",({name:"Login"})).click()
     
-        await expect(page).toHaveURL(/localhost:3000/)
+        await expect(page.getByRole("button",({name:"Logout"}))).toBeVisible()
     })
 })

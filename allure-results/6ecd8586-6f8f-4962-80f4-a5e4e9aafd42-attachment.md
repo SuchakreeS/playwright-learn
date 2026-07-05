@@ -1,0 +1,220 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Chaptor04\01_BrowserContext.spec.ts >> Browser Context in playwright test 1
+- Location: tests\Chaptor04\01_BrowserContext.spec.ts:3:5
+
+# Error details
+
+```
+Test timeout of 4000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "ShopBoard" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - link "Home" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - link "Cart" [ref=e6] [cursor=pointer]:
+        - /url: /cart
+      - link "Forms" [ref=e7] [cursor=pointer]:
+        - /url: /form-elements
+      - link "Practice" [ref=e8] [cursor=pointer]:
+        - /url: /practice
+  - main [ref=e9]:
+    - generic [ref=e10]:
+      - link "Logout" [ref=e11] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=e12]: Practice Playground
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]: Name *
+          - textbox "Employee Name" [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]: Department *
+          - textbox "Department" [ref=e19]
+        - generic [ref=e20]:
+          - generic [ref=e21]: Date of Birth *
+          - textbox [ref=e22]
+        - generic [ref=e23]:
+          - generic [ref=e24]: Gender *
+          - combobox [ref=e25]:
+            - option "Male" [selected]
+            - option "Female"
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - generic [ref=e29]: "Checkboxes:"
+            - generic [ref=e30]:
+              - generic [ref=e31] [cursor=pointer]:
+                - checkbox "Playwright" [ref=e32]
+                - text: Playwright
+              - generic [ref=e33] [cursor=pointer]:
+                - checkbox "Cypress" [ref=e34]
+                - text: Cypress
+              - generic [ref=e35] [cursor=pointer]:
+                - checkbox "Selenium" [ref=e36]
+                - text: Selenium
+              - generic [ref=e37] [cursor=pointer]:
+                - checkbox "JavaScript" [ref=e38]
+                - text: JavaScript
+              - generic [ref=e39] [cursor=pointer]:
+                - checkbox "Postman" [ref=e40]
+                - text: Postman
+              - generic [ref=e41] [cursor=pointer]:
+                - checkbox "Rest Assured" [ref=e42]
+                - text: Rest Assured
+              - generic [ref=e43] [cursor=pointer]:
+                - checkbox "API Testing" [ref=e44]
+                - text: API Testing
+          - generic [ref=e45]:
+            - generic [ref=e46]: "Radio Buttons:"
+            - generic [ref=e47]:
+              - generic [ref=e48] [cursor=pointer]:
+                - radio "India" [checked] [ref=e49]
+                - text: India
+              - generic [ref=e50] [cursor=pointer]:
+                - radio "United States" [ref=e51]
+                - text: United States
+              - generic [ref=e52] [cursor=pointer]:
+                - radio "Japan" [ref=e53]
+                - text: Japan
+              - generic [ref=e54] [cursor=pointer]:
+                - radio "Russia" [ref=e55]
+                - text: Russia
+          - generic [ref=e57]:
+            - button "Simple Alert" [ref=e58] [cursor=pointer]
+            - button "Confirm" [ref=e59] [cursor=pointer]
+            - button "Prompt" [ref=e60] [cursor=pointer]
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e63]: "Upload & Download File:"
+            - button "Choose File" [ref=e64]
+            - paragraph [ref=e65]: No file selected
+          - generic [ref=e66]:
+            - generic [ref=e67]: "Downloads:"
+            - generic [ref=e68]:
+              - link "Download Excel" [ref=e69] [cursor=pointer]:
+                - /url: "#"
+              - link "Download Word" [ref=e70] [cursor=pointer]:
+                - /url: "#"
+              - link "Download XML" [ref=e71] [cursor=pointer]:
+                - /url: "#"
+              - link "Download PDF" [ref=e72] [cursor=pointer]:
+                - /url: "#"
+          - generic [ref=e73]:
+            - generic [ref=e74]: "Drag and Drop:"
+            - generic [ref=e75]:
+              - generic [ref=e76]: Drag me
+              - generic [ref=e77]: Drop here
+          - generic [ref=e78]:
+            - generic [ref=e79]: "Mouse Hover:"
+            - link "Hover this link" [ref=e81] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e82]:
+            - generic [ref=e83]: "Auto Suggestions:"
+            - textbox "Search courses..." [ref=e85]
+      - button "Save" [ref=e87] [cursor=pointer]
+      - generic [ref=e88]:
+        - heading "Latest 10 Records" [level=3] [ref=e89]
+        - button "Clear All" [ref=e90] [cursor=pointer]
+      - table [ref=e91]:
+        - rowgroup [ref=e92]:
+          - row "Name Department DOB Gender Technologies Country" [ref=e93]:
+            - columnheader "Name" [ref=e94]
+            - columnheader "Department" [ref=e95]
+            - columnheader "DOB" [ref=e96]
+            - columnheader "Gender" [ref=e97]
+            - columnheader "Technologies" [ref=e98]
+            - columnheader "Country" [ref=e99]
+        - rowgroup
+      - separator [ref=e100]
+      - generic [ref=e101]:
+        - heading "Learning Scheduler" [level=2] [ref=e102]
+        - generic [ref=e103]:
+          - generic [ref=e104]: Subject
+          - combobox [ref=e105]:
+            - option "Select a subject" [selected]
+            - option "Playwright Basics"
+            - option "Advanced Testing"
+            - option "API Testing"
+            - option "CI/CD Integration"
+            - option "Test Automation Patterns"
+        - generic [ref=e106]:
+          - generic [ref=e107]: Difficulty Level
+          - combobox [ref=e108]:
+            - option "Select a level" [selected]
+            - option "Beginner"
+            - option "Intermediate"
+            - option "Advanced"
+        - generic [ref=e109]:
+          - generic [ref=e110]: Schedule Date
+          - generic [ref=e111]:
+            - combobox [ref=e112]:
+              - option "Month" [selected]
+              - option "Jan"
+              - option "Feb"
+              - option "Mar"
+              - option "Apr"
+              - option "May"
+              - option "Jun"
+              - option "Jul"
+              - option "Aug"
+              - option "Sep"
+              - option "Oct"
+              - option "Nov"
+              - option "Dec"
+            - combobox [ref=e113]:
+              - option "Year" [selected]
+              - option "2026"
+              - option "2027"
+              - option "2028"
+              - option "2029"
+              - option "2030"
+        - button "Schedule" [ref=e115]
+      - separator [ref=e116]
+      - heading "API Playground" [level=2] [ref=e117]
+      - group [ref=e119]:
+        - generic "Available API Endpoints (click to expand)" [ref=e120] [cursor=pointer]
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - combobox [ref=e123]:
+            - option "GET" [selected]
+            - option "POST"
+            - option "PUT"
+            - option "PATCH"
+            - option "DELETE"
+          - textbox "/api/practice-api" [ref=e124]
+          - button "Send" [ref=e125]
+          - button "Generate Token" [ref=e126]
+        - group [ref=e127]:
+          - generic "Quick-try examples (click to populate)" [ref=e128] [cursor=pointer]
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - generic [ref=e131]: Headers (JSON)
+            - textbox [ref=e132]: "{ \"Content-Type\": \"application/json\" }"
+          - generic [ref=e133]:
+            - generic [ref=e134]: Request Body (JSON)
+            - textbox [ref=e135]: "{ \"name\": \"test\", \"value\": \"hello\" }"
+        - generic [ref=e138]: Response
+      - generic [ref=e140]:
+        - generic [ref=e141] [cursor=pointer]:
+          - generic [ref=e142]: Chatbot
+          - generic [ref=e143]: −
+        - generic [ref=e145]:
+          - textbox "Type..." [ref=e146]
+          - button "Send" [ref=e147] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e153] [cursor=pointer]:
+    - img [ref=e154]
+  - alert [ref=e157]
+```
