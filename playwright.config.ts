@@ -4,9 +4,9 @@ import { defineConfig, devices } from '@playwright/test';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+import dotenv from 'dotenv';
+import path from 'path';
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -14,8 +14,8 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   timeout: 10000,
-  expect:{
-    timeout:10000,
+  expect: {
+    timeout: 10000,
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -28,19 +28,19 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ["html"],
-    ["json",{outputFile:"json-test-report.json"}],
-    ["allure-playwright",{outputFolder:'./allure-results'}]
+    ["json", { outputFile: "json-test-report.json" }],
+    ["allure-playwright", { outputFolder: './allure-results' }]
   ],
-    // ['allure-playwright',{outputFolder:'allure-report'}]
+  // ['allure-playwright',{outputFolder:'allure-report'}]
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
-    headless:true,
-    testIdAttribute:"data-testid",
+    baseURL: 'https://jsonplaceholder.typicode.com',
+    headless: true,
+    testIdAttribute: "data-testid",
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    screenshot:"on",
-    video:"on",
+    screenshot: "on",
+    video: "on",
     trace: 'on-first-retry',
   },
 

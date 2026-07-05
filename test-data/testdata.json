@@ -1,0 +1,12 @@
+{
+    "TestdataSet1": {
+        "Skill1": "T-Shirt",
+        "Skill2": "Wallet",
+        "Skill3": "Jacket"
+    },
+    "TestdataSet2": {
+        "Skill1": "Hat",
+        "Skill2": "Shoes",
+        "Skill3": "Jeans"
+    }
+}
